@@ -1,0 +1,14 @@
+{
+  "name": "zhihang-education",
+  "version": "1.0.0",
+  "description": "智航教育 - 前后端一体平台",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mammoth": "^1.6.0"
+  }
+}

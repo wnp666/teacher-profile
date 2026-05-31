@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>智航教育 - 2026暑假班招生</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-bg"></div>
+        <div class="header-content">
+            <div class="logo">智航教育</div>
+            <h1 class="slogan">启迪智慧，领航未来</h1>
+            <p class="subtitle">2026暑假班火热招生中</p>
+            <div class="header-tags">
+                <span class="tag">小班预习新课</span>
+                <span class="tag">一对一辅导</span>
+                <span class="tag">个性化提分</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">985/211</span>
+                    <span class="stat-label">双一流高校本科生、研究生</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">6大</span>
+                    <span class="stat-label">金牌教师</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">小班</span>
+                    <span class="stat-label">精品教学</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">金牌教师团队</h2>
+            <div class="teachers-grid" id="teachersGrid">
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">开设课程</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <span class="course-icon">📚</span>
+                    <h3>小学</h3>
+                    <p>基础巩固，习惯养成</p>
+                </div>
+                <div class="course-card">
+                    <span class="course-icon">📖</span>
+                    <h3>初中</h3>
+                    <p>知识衔接，能力提升</p>
+                </div>
+                <div class="course-card">
+                    <span class="course-icon">🎓</span>
+                    <h3>高中</h3>
+                    <p>冲刺高考，圆梦大学</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">教学特色</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">👨‍🎓</span>
+                    <h3>双一流师资</h3>
+                    <p>985/211 双一流高校本科生、研究生，学科功底扎实</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📋</span>
+                    <h3>因材施教</h3>
+                    <p>贴合学情，个性化定制学习方案</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📈</span>
+                    <h3>提分显著</h3>
+                    <p>多年经验，学生成绩提升明显</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">❤️</span>
+                    <h3>耐心负责</h3>
+                    <p>授课细致，口碑良好</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">后端API状态</h2>
+            <div class="card" id="apiStatus">
+                <p>正在连接后端服务...</p>
+            </div>
+        </section>
+
+        <section class="section contact-section">
+            <h2 class="section-title">联系我们</h2>
+            <div class="card contact-card">
+                <a href="tel:19827607192" class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div class="contact-info">
+                        <span class="contact-label">咨询热线</span>
+                        <span class="contact-value">198-2760-7192</span>
+                    </div>
+                </a>
+                <div class="contact-item">
+                    <span class="contact-icon">💬</span>
+                    <div class="contact-info">
+                        <span class="contact-label">微信同号</span>
+                        <span class="contact-value">19827607192（苦老师）</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">👨‍🏫</span>
+                    <div class="contact-info">
+                        <span class="contact-label">咨询老师</span>
+                        <span class="contact-value">苦老师</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section qr-section">
+            <div class="qr-card">
+                <span class="qr-icon">📱</span>
+                <h3>扫码了解更多</h3>
+                <p>了解收费标准 · 查看师资详情</p>
+                <img src="erweima.jpg" alt="二维码" class="qr-code">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 智航教育 | 启迪智慧，领航未来</p>
+    </footer>
+
+    <a href="tel:19827607192" class="fab">
+        <span>📞</span>
+    </a>
+
+    <script>
+        const API_BASE = window.location.origin;
+
+        const teachersFallback = [
+            { id: 'ku', name: '苦老师', subject: '语文教师', title: '智航教育负责人 · 语文教学', motto: '一字一世界，一文一乾坤', avatar: 'photo-ku.jpeg', tags: ['小升初', '初升高', '高考', '语文'] },
+            { id: 'ku-tutor', name: '苦老师', subject: '辅导教师', title: '专职教师 · 理科辅导', motto: '自知自省，自立自强', avatar: 'photo-ku-tutor.jpeg', tags: ['物理', '化学', '电子', '理科'] },
+            { id: 'wang', name: '王老师', subject: '理科教师', title: '数理化提分专家', motto: '学好数理化，走遍天下都不怕', avatar: 'photo-wang.png', tags: ['数学', '物理', '化学'] },
+            { id: 'chen', name: '陈老师', subject: '英语教师', title: '中高考英语专攻', motto: 'Spread knowledge, warm every soul', avatar: 'photo-chen.jpeg', tags: ['语法', '阅读', '写作'] },
+            { id: 'kong', name: '孔老师', subject: '理科教师', title: '数理化提分能手', motto: '脚踏实地，仰望星空', avatar: 'photo-kong.jpeg', tags: ['数学', '物理', '化学', '生物'] },
+            { id: 'huang', name: '黄老师', subject: '数学教师', title: '中小学数学专攻', motto: '学习与生命同行', avatar: 'photo-huang.jpeg', tags: ['小学数学', '初中数学', '英语'] }
+        ];
+
+        function renderTeachers(teachers) {
+            const grid = document.getElementById('teachersGrid');
+            grid.innerHTML = teachers.map(t => `
+                <a href="teacher-${t.id}.html" class="teacher-card">
+                    <div class="teacher-avatar">
+                        <img src="${t.avatar.startsWith('http') ? t.avatar : t.avatar}" alt="${t.name}">
+                    </div>
+                    <div class="teacher-info">
+                        <h3>${t.name}</h3>
+                        <p class="teacher-subject">${t.subject}</p>
+                        <p class="teacher-title">${t.title}</p>
+                        <div class="teacher-tags">
+                            ${t.tags.map(tag => `<span>${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        async function loadTeachers() {
+            const statusEl = document.getElementById('apiStatus');
+            try {
+                const resp = await fetch(`${API_BASE}/api/teachers`);
+                const result = await resp.json();
+                if (result.code === 0 && result.data.length > 0) {
+                    renderTeachers(result.data);
+                    statusEl.innerHTML = '<p style="color:#52c41a;">✅ 后端API已连接，教师数据实时加载</p>';
+                } else {
+                    throw new Error('数据为空');
+                }
+            } catch (e) {
+                renderTeachers(teachersFallback);
+                statusEl.innerHTML = `
+                    <p style="color:#faad14;">⚠️ 后端未连接，使用本地数据展示</p>
+                    <p style="font-size:13px;color:#999;margin-top:8px;">
+                        启动后端: 在终端运行 <code style="background:#f5f5f5;padding:2px 6px;border-radius:4px;">cd "${window.location.pathname.replace(/\/[^/]*$/, '')}" && npm start</code>
+                    </p>
+                `;
+            }
+        }
+
+        loadTeachers();
+    </script>
+</body>
+</html>
